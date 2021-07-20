@@ -43,20 +43,10 @@
 		return false;
 	});
 
-	
-	$(window).load(function() {
-		$(this).scrollTop(0);
-		$(".loader-wrapper").fadeOut(60);//The time it take
-		$('body').addClass('preloader')
-	});
-
-
-
 })(jQuery);
 
-// $(window).load(function() {
-//     $(this).scrollTop(0);
-//     $(".preloader").fadeOut(60);//The time it take
-//     $('body').addClass('preloader')
-// });
+$(window).on("load", function(){
+	$(".preloader").fadeOut();
+	console.log('hii there')
+});
 
