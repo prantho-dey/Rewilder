@@ -15,17 +15,9 @@
 	};
 
 	// ================ Accordion =================
-	$(".single-accordion").click(function(){
-		$(this).toggleClass("active").children('.accordion-body').slideToggle().parents('.single-accordion').siblings().removeClass('active').children('.accordion-body').slideUp();
-	});
-
-
-	// PreLoader 
-	// var PreLoader = document.getElementById('preloader');
-
-	// function myFuncatio() {
-	// 	PreLoader.style.display = 'none'
-	// };
+	$(".accordion-head").click(function(){
+		$(this).toggleClass("active").next().slideToggle().parent().siblings().children('.accordion-head').removeClass('.active').next().slideUp();
+    });
 	
 	/*------------------------------------
         scrollUp

@@ -185,7 +185,18 @@
 }
 .update-post {
     overflow-y: auto;
-    height: 240px;
+    height: 215px;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #dadada;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $theme-color;
+        border-radius: 10px;
+    }
     .single-updeate {
         background: #FFFFFF;
         border: 1px solid #E8E8E8;

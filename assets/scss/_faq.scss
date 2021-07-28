@@ -12,15 +12,15 @@
     @include transition(.3s);
     position: relative;
 
-    &.active {
-        .accordion-head {
-            h6 {
-                &::after {
-                    transform: translateY(-50%) rotate(0deg);
-                }
-            }
-        }
-    }
+    // &.active {
+    //     .accordion-head {
+    //         h6 {
+    //             &::after {
+    //                 transform: translateY(-50%) rotate(0deg);
+    //             }
+    //         }
+    //     }
+    // }
     &:last-child {
         margin-bottom: 0;
     }
@@ -28,6 +28,13 @@
 
 .accordion-head {
     cursor: pointer;
+    &.active {
+        h6 {
+            &::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
     h6 {
         position: relative;
         font-size: 18px;

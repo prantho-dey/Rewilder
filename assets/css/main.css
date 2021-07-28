@@ -194,8 +194,8 @@ label {
 /* Others Common Css Here :) */
 #scrollUp {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 10px;
+  right: 10px;
   background: #2C422F;
   height: 40px;
   width: 40px;
@@ -876,7 +876,18 @@ label {
 
 .update-post {
   overflow-y: auto;
-  height: 240px;
+  height: 215px;
+}
+.update-post::-webkit-scrollbar {
+  width: 10px;
+}
+.update-post::-webkit-scrollbar-track {
+  background-color: #dadada;
+  border-radius: 10px;
+}
+.update-post::-webkit-scrollbar-thumb {
+  background: #2C422F;
+  border-radius: 10px;
 }
 .update-post .single-updeate {
   background: #FFFFFF;
@@ -983,10 +994,7 @@ label {
   }
 }
 .cripto-native-area {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #0C1520;
 }
 
 .cripto-native-content {
@@ -1076,15 +1084,15 @@ label {
   transition: all 0.3s linear 0s;
   position: relative;
 }
-.single-accordion.active .accordion-head h6::after {
-  transform: translateY(-50%) rotate(0deg);
-}
 .single-accordion:last-child {
   margin-bottom: 0;
 }
 
 .accordion-head {
   cursor: pointer;
+}
+.accordion-head.active h6::after {
+  transform: translateY(-50%) rotate(0deg);
 }
 .accordion-head h6 {
   position: relative;
