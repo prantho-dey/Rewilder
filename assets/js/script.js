@@ -16,29 +16,31 @@
 
 	// ================ Accordion =================
 	$(".accordion-head").click(function(){
-		$(this).toggleClass("active").next().slideToggle().parent().siblings().children('.accordion-head').removeClass('.active').next().slideUp();
+		$(this).toggleClass("active").next().slideToggle().parent().siblings().children('.accordion-head').removeClass('.active');
     });
 	
 	/*------------------------------------
-        scrollUp
+        scrollUp Button
 	--------------------------------------*/
-	$(window).scroll(function () {
-		if ($(this).scrollTop() !== 0) {
-			$('#scrollUp').fadeIn();
-		} else {
-			$('#scrollUp').fadeOut();
-		}
-    });
+	// $(window).scroll(function () {
+	// 	if ($(this).scrollTop() !== 0) {
+	// 		$('#scrollUp').fadeIn();
+	// 	} else {
+	// 		$('#scrollUp').fadeOut();
+	// 	}
+    // });
     
-	$('#scrollUp').on('click', function () {
-		$("html, body").animate({scrollTop: 0}, 600);
-		return false;
-	});
+	// $('#scrollUp').on('click', function () {
+	// 	$("html, body").animate({scrollTop: 0}, 600);
+	// 	return false;
+	// });
 
 })(jQuery);
 
-$(window).on("load", function(){
-	$(".preloader").fadeOut();
-	console.log('hii there')
-});
+
+// ======== Preeloader ===========
+// $(window).on("load", function(){
+// 	$(".preloader").fadeOut();
+// 	console.log('hii there')
+// });
 
